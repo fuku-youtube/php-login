@@ -1,0 +1,14 @@
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'DB_USER'@'localhost' (using password: YES) in /Applications/MAMP/htdocs/dbconnect.php:23
+Stack trace:
+#0 /Applications/MAMP/htdocs/dbconnect.php(23): PDO->__construct('mysql:host=loca...', 'DB_USER', 'fukusan123', Array)
+#1 /Applications/MAMP/htdocs/classes/UserLogic.php(25): connect()
+#2 /Applications/MAMP/htdocs/public/register.php(35): UserLogic::createUser(Array)
+#3 {main}PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in /Applications/MAMP/htdocs/classes/UserLogic.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/classes/UserLogic.php(26): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/public/register.php(35): UserLogic::createUser(Array)
+#2 {main}PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'fuku@test.com' for key 'email' in /Applications/MAMP/htdocs/classes/UserLogic.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/classes/UserLogic.php(26): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/public/register.php(35): UserLogic::createUser(Array)
+#2 {main}
